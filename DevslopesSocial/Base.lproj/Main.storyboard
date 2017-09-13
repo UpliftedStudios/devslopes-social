@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +21,111 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hb2-sy-3tY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes-logo" translatesAutoresizingMaskIntoConstraints="NO" id="BCb-GD-tMw">
+                                        <rect key="frame" x="68" y="11" width="239" height="128"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.73725490196078436" blue="0.83137254901960778" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="BCb-GD-tMw" secondAttribute="trailing" constant="60" id="JyF-Yd-I4E"/>
+                                    <constraint firstAttribute="height" constant="150" id="Z4M-fW-YFh"/>
+                                    <constraint firstItem="BCb-GD-tMw" firstAttribute="leading" secondItem="Hb2-sy-3tY" secondAttribute="leadingMargin" constant="60" id="fNB-Gs-ZfF"/>
+                                    <constraint firstItem="BCb-GD-tMw" firstAttribute="top" secondItem="Hb2-sy-3tY" secondAttribute="topMargin" constant="3" id="m5K-dU-qeT"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="BCb-GD-tMw" secondAttribute="bottom" constant="3" id="pRu-gY-Lf9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xu-fY-mns">
+                                <rect key="frame" x="0.0" y="592" width="375" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you haven't signed in before an account will be automatically created for you" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0Q-KE-dIy">
+                                        <rect key="frame" x="16" y="18" width="343" height="41"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.87" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.51372549019607838" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="y0Q-KE-dIy" secondAttribute="trailing" constant="16" id="6Qy-yU-snv"/>
+                                    <constraint firstAttribute="height" constant="75" id="a1S-Yl-ofg"/>
+                                    <constraint firstAttribute="bottom" secondItem="y0Q-KE-dIy" secondAttribute="bottom" constant="16" id="dqv-jO-fD4"/>
+                                    <constraint firstItem="y0Q-KE-dIy" firstAttribute="leading" secondItem="6xu-fY-mns" secondAttribute="leading" constant="16" id="ud8-Jr-rrN"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a sign in method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52d-2H-bnK">
+                                <rect key="frame" x="16" y="170" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZm-WR-nUH">
+                                <rect key="frame" x="112.5" y="210.5" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.25490196078431371" green="0.36078431372549019" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="KR3-IY-LpZ"/>
+                                    <constraint firstAttribute="height" constant="150" id="SmN-2E-Y0b"/>
+                                </constraints>
+                                <state key="normal" image="f">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RvG-er-EEh">
+                                <rect key="frame" x="46" y="400.5" width="283" height="127"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V72-z8-xuy">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="30"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZT-gq-Sq9">
+                                        <rect key="frame" x="0.0" y="45" width="283" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoR-bG-AGG">
+                                        <rect key="frame" x="0.0" y="90" width="283" height="37"/>
+                                        <color key="backgroundColor" red="0.8666666666666667" green="0.17254901960784313" blue="0.0" alpha="0.87" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6xu-fY-mns" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5op-Ll-UYL"/>
+                            <constraint firstItem="RvG-er-EEh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ai9-n0-FX7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RvG-er-EEh" secondAttribute="trailing" constant="30" id="GH7-eH-wvh"/>
+                            <constraint firstItem="52d-2H-bnK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Nsu-ab-SE7"/>
+                            <constraint firstItem="RvG-er-EEh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="UD2-EC-AlR"/>
+                            <constraint firstAttribute="trailing" secondItem="6xu-fY-mns" secondAttribute="trailing" id="WLb-Bj-Vj7"/>
+                            <constraint firstItem="Hb2-sy-3tY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yfh-ZC-4sI"/>
+                            <constraint firstItem="RvG-er-EEh" firstAttribute="top" secondItem="EZm-WR-nUH" secondAttribute="bottom" constant="40" id="bz8-CJ-E6W"/>
+                            <constraint firstItem="EZm-WR-nUH" firstAttribute="top" secondItem="52d-2H-bnK" secondAttribute="bottom" constant="20" id="c71-9q-Swo"/>
+                            <constraint firstItem="52d-2H-bnK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eOX-hu-jfb"/>
+                            <constraint firstItem="52d-2H-bnK" firstAttribute="top" secondItem="Hb2-sy-3tY" secondAttribute="bottom" constant="20" id="fpC-5g-u0E"/>
+                            <constraint firstAttribute="trailing" secondItem="Hb2-sy-3tY" secondAttribute="trailing" id="gYV-Co-coZ"/>
+                            <constraint firstItem="Hb2-sy-3tY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lcK-E6-vnX"/>
+                            <constraint firstItem="EZm-WR-nUH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pme-ZY-3pm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6xu-fY-mns" secondAttribute="bottom" id="psc-3e-Ddz"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="devslopes-logo" width="150" height="94"/>
+        <image name="f" width="352" height="328"/>
+    </resources>
 </document>

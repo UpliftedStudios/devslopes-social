@@ -15,6 +15,9 @@ class SignInVC: UIViewController {
     
     @IBOutlet weak var emailField: FancyField!
     @IBOutlet weak var pwdField: FancyField!
+
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,5 +75,7 @@ class SignInVC: UIViewController {
         }
         
     }
+    
+    
 }
 

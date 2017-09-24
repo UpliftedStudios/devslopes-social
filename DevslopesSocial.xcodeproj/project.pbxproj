@@ -21,6 +21,7 @@
 		A98439131F6B3931007BE401 /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98439121F6B3931007BE401 /* FancyBtn.swift */; };
 		A986E0EC1F74629F00762DE2 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0EB1F74629F00762DE2 /* FeedVC.swift */; };
 		A986E0EE1F772B2F00762DE2 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0ED1F772B2F00762DE2 /* CircleView.swift */; };
+		A986E0F01F77419400762DE2 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0EF1F77419400762DE2 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		A98439121F6B3931007BE401 /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
 		A986E0EB1F74629F00762DE2 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		A986E0ED1F772B2F00762DE2 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		A986E0EF1F77419400762DE2 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		B07C1C87C18A8957F71759D0 /* Pods_DevslopesSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevslopesSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				A98439101F6B3800007BE401 /* FancyField.swift */,
 				A98439121F6B3931007BE401 /* FancyBtn.swift */,
 				A986E0ED1F772B2F00762DE2 /* CircleView.swift */,
+				A986E0EF1F77419400762DE2 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				A984390A1F6B3416007BE401 /* FancyView.swift in Sources */,
 				A984390D1F6B349E007BE401 /* Constants.swift in Sources */,
 				A98439131F6B3931007BE401 /* FancyBtn.swift in Sources */,
+				A986E0F01F77419400762DE2 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

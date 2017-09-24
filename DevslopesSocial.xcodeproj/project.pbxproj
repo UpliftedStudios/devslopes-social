@@ -19,6 +19,8 @@
 		A984390F1F6B3684007BE401 /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A984390E1F6B3684007BE401 /* RoundBtn.swift */; };
 		A98439111F6B3800007BE401 /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98439101F6B3800007BE401 /* FancyField.swift */; };
 		A98439131F6B3931007BE401 /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98439121F6B3931007BE401 /* FancyBtn.swift */; };
+		A986E0EC1F74629F00762DE2 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0EB1F74629F00762DE2 /* FeedVC.swift */; };
+		A986E0EE1F772B2F00762DE2 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0ED1F772B2F00762DE2 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		A984390E1F6B3684007BE401 /* RoundBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		A98439101F6B3800007BE401 /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		A98439121F6B3931007BE401 /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
+		A986E0EB1F74629F00762DE2 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		A986E0ED1F772B2F00762DE2 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		B07C1C87C18A8957F71759D0 /* Pods_DevslopesSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevslopesSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +113,7 @@
 				A984390E1F6B3684007BE401 /* RoundBtn.swift */,
 				A98439101F6B3800007BE401 /* FancyField.swift */,
 				A98439121F6B3931007BE401 /* FancyBtn.swift */,
+				A986E0ED1F772B2F00762DE2 /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				A98438F41F69DF57007BE401 /* SignInVC.swift */,
+				A986E0EB1F74629F00762DE2 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -264,10 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A986E0EE1F772B2F00762DE2 /* CircleView.swift in Sources */,
 				A98439111F6B3800007BE401 /* FancyField.swift in Sources */,
 				A98438F51F69DF57007BE401 /* SignInVC.swift in Sources */,
 				A984390F1F6B3684007BE401 /* RoundBtn.swift in Sources */,
 				A98438F31F69DF57007BE401 /* AppDelegate.swift in Sources */,
+				A986E0EC1F74629F00762DE2 /* FeedVC.swift in Sources */,
 				A984390A1F6B3416007BE401 /* FancyView.swift in Sources */,
 				A984390D1F6B349E007BE401 /* Constants.swift in Sources */,
 				A98439131F6B3931007BE401 /* FancyBtn.swift in Sources */,

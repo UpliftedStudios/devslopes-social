@@ -22,6 +22,7 @@
 		A986E0EC1F74629F00762DE2 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0EB1F74629F00762DE2 /* FeedVC.swift */; };
 		A986E0EE1F772B2F00762DE2 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0ED1F772B2F00762DE2 /* CircleView.swift */; };
 		A986E0F01F77419400762DE2 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0EF1F77419400762DE2 /* PostCell.swift */; };
+		A986E0F41F7788EE00762DE2 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0F31F7788EE00762DE2 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		A986E0EB1F74629F00762DE2 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		A986E0ED1F772B2F00762DE2 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		A986E0EF1F77419400762DE2 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		A986E0F31F7788EE00762DE2 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		B07C1C87C18A8957F71759D0 /* Pods_DevslopesSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevslopesSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 		A98438F11F69DF57007BE401 /* DevslopesSocial */ = {
 			isa = PBXGroup;
 			children = (
+				A986E0F21F7788D200762DE2 /* Services */,
 				A984390B1F6B348D007BE401 /* Util */,
 				A98439061F69E2BB007BE401 /* Model */,
 				A98439071F69E2C0007BE401 /* View */,
@@ -136,6 +139,14 @@
 				A984390C1F6B349E007BE401 /* Constants.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		A986E0F21F7788D200762DE2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A986E0F31F7788EE00762DE2 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		C80867ABFC20499C52A06D8E /* Pods */ = {
@@ -278,6 +289,7 @@
 				A98438F51F69DF57007BE401 /* SignInVC.swift in Sources */,
 				A984390F1F6B3684007BE401 /* RoundBtn.swift in Sources */,
 				A98438F31F69DF57007BE401 /* AppDelegate.swift in Sources */,
+				A986E0F41F7788EE00762DE2 /* DataService.swift in Sources */,
 				A986E0EC1F74629F00762DE2 /* FeedVC.swift in Sources */,
 				A984390A1F6B3416007BE401 /* FancyView.swift in Sources */,
 				A984390D1F6B349E007BE401 /* Constants.swift in Sources */,

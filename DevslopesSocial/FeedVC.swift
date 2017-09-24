@@ -31,6 +31,7 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        self.tableView.backgroundColor = UIColor.clear
         return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
     }
     

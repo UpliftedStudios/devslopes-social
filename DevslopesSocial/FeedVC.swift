@@ -14,16 +14,28 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var posts = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.delegate = self
         tableView.dataSource = self
         
+        //This is a listener for Firebase
         DataService.ds.REF_POSTS.observe(.value, with: { (DataSnapshot) in
-            print(DataSnapshot.value)
+            if let snapshot = DataSnapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshot {
+                    print("SNAP: \(snap)")
+                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+                        let key = snap.key
+                        let post = Post(postKey: key, postData: postDict)
+                        self.posts.append(post)
+                    }
+                }
+            }
+            self.tableView.reloadData()
         })
-
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,10 +43,14 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let post = posts[indexPath.row]
+        print("MARCUS: \(post.caption)")
+        
         self.tableView.backgroundColor = UIColor.clear
         return tableView.dequeueReusableCell(withIdentifier: "PostCell") as! PostCell
     }

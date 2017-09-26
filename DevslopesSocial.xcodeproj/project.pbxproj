@@ -23,6 +23,7 @@
 		A986E0EE1F772B2F00762DE2 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0ED1F772B2F00762DE2 /* CircleView.swift */; };
 		A986E0F01F77419400762DE2 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0EF1F77419400762DE2 /* PostCell.swift */; };
 		A986E0F41F7788EE00762DE2 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0F31F7788EE00762DE2 /* DataService.swift */; };
+		A9E29CD61F7B12F400D08437 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E29CD51F7B12F400D08437 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		A986E0ED1F772B2F00762DE2 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		A986E0EF1F77419400762DE2 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		A986E0F31F7788EE00762DE2 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		A9E29CD51F7B12F400D08437 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B07C1C87C18A8957F71759D0 /* Pods_DevslopesSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevslopesSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 		A98439061F69E2BB007BE401 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9E29CD51F7B12F400D08437 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				A986E0EE1F772B2F00762DE2 /* CircleView.swift in Sources */,
 				A98439111F6B3800007BE401 /* FancyField.swift in Sources */,
 				A98438F51F69DF57007BE401 /* SignInVC.swift in Sources */,
+				A9E29CD61F7B12F400D08437 /* Post.swift in Sources */,
 				A984390F1F6B3684007BE401 /* RoundBtn.swift in Sources */,
 				A98438F31F69DF57007BE401 /* AppDelegate.swift in Sources */,
 				A986E0F41F7788EE00762DE2 /* DataService.swift in Sources */,

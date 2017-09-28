@@ -33,6 +33,7 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
         
         //This is a listener for Firebase
         DataService.ds.REF_POSTS.observe(.value, with: { (DataSnapshot) in
+            self.posts = []
             if let snapshot = DataSnapshot.children.allObjects as? [DataSnapshot] {
                 for snap in snapshot {
                     print("SNAP: \(snap)")
@@ -45,6 +46,10 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
             }
             self.tableView.reloadData()
         })
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,6 +61,7 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         self.tableView.backgroundColor = UIColor.clear
         
         let post = posts[indexPath.row]
@@ -67,8 +73,8 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
                 return cell
             } else {
                 cell.configureCell(post: post)
+            }
                 return cell
-                }
             } else {
                 return PostCell()
             }
@@ -94,9 +100,6 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
             print("MARCUS: An image must be selected")
             return
         }
-//        guard let caption = captionField.text else {
-//            return
-//        }
         
         if let imgData = UIImageJPEGRepresentation(img, 0.2) {
             

@@ -94,9 +94,9 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
             print("MARCUS: An image must be selected")
             return
         }
-        guard let caption = captionField.text else {
-            return
-        }
+//        guard let caption = captionField.text else {
+//            return
+//        }
         
         if let imgData = UIImageJPEGRepresentation(img, 0.2) {
             
@@ -110,12 +110,30 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
                 } else {
                     print("MARCUS: Successfully uploaded image to Firebase Storage")
                     let downloadURL = metadata?.downloadURL()?.absoluteString
+                        if let url = downloadURL {
+                            self.postToFirebase(imgURL: url)
+                        }
+                    }
                 }
             }
         }
-        self.imageSelected = false
-        self.imageAdd.image = UIImage(named: "add-image")
-        self.captionField.text = ""
+    
+    func postToFirebase(imgURL: String) {
+        
+        let post: Dictionary<String, Any> = [
+            "caption" : captionField.text!,
+            "imageURL" : imgURL,
+        "likes" : 0
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        imageSelected = false
+        imageAdd.image = UIImage(named: "add-image")
+        captionField.text = ""
+        
+        tableView.reloadData()
     }
     
     @IBAction func signOutTapped(_ sender: Any) {

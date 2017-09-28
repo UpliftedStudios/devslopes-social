@@ -14,10 +14,12 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageAdd: CircleView!
+    @IBOutlet weak var captionField: FancyField!
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +77,7 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
             imageAdd.image = image
+            imageSelected = true
         } else {
             print("MARCUS: A valid image was not selected")
         }
@@ -83,6 +86,36 @@ class FeedVC: UIViewController,UITableViewDelegate, UITableViewDataSource, UIIma
     
     @IBAction func addImageTapped(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func postBtnTapped(_ sender: Any) {
+        
+        guard let img = imageAdd.image, imageSelected == true else {
+            print("MARCUS: An image must be selected")
+            return
+        }
+        guard let caption = captionField.text else {
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            let imgUid = NSUUID().uuidString
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUid).putData(imgData, metadata: metadata) { (metadata, error) in
+                if error != nil {
+                    print("MARCUS: Unable to upload image to Firebase Storage")
+                } else {
+                    print("MARCUS: Successfully uploaded image to Firebase Storage")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                }
+            }
+        }
+        self.imageSelected = false
+        self.imageAdd.image = UIImage(named: "add-image")
+        self.captionField.text = ""
     }
     
     @IBAction func signOutTapped(_ sender: Any) {

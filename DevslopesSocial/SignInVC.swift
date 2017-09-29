@@ -19,7 +19,7 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,9 +66,11 @@ class SignInVC: UIViewController {
     
     @IBAction func signInTapped(_ sender: Any) {
         
+        performSegue(withIdentifier: SEGUE_PROFILE, sender: nil)
+        
         if let email = emailField.text, let pwd = pwdField.text {
             Auth.auth().signIn(withEmail: email, password: pwd, completion: { (user, error) in
-                
+
                 if error == nil {
                     print("MARCUS: Email successfully Authenticated with Firebase")
                     if let user = user {
@@ -93,11 +95,10 @@ class SignInVC: UIViewController {
     }
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
-        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
-        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
-        print("MARCUS: Data saved to keychain - \(keychainResult)")
-        performSegue(withIdentifier: SEGUE_FEED, sender: nil)
+//        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+//        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+//        print("MARCUS: Data saved to keychain - \(keychainResult)")
+        performSegue(withIdentifier: SEGUE_PROFILE, sender: nil)
     }
-    
 }
 

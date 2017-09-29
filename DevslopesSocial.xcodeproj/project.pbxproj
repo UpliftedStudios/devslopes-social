@@ -24,6 +24,8 @@
 		A986E0F01F77419400762DE2 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0EF1F77419400762DE2 /* PostCell.swift */; };
 		A986E0F41F7788EE00762DE2 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A986E0F31F7788EE00762DE2 /* DataService.swift */; };
 		A9E29CD61F7B12F400D08437 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E29CD51F7B12F400D08437 /* Post.swift */; };
+		A9EA97741F7ECE580078F221 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EA97731F7ECE580078F221 /* ProfileVC.swift */; };
+		A9EA97761F7EDC150078F221 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EA97751F7EDC150078F221 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		A986E0EF1F77419400762DE2 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		A986E0F31F7788EE00762DE2 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		A9E29CD51F7B12F400D08437 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A9EA97731F7ECE580078F221 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		A9EA97751F7EDC150078F221 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B07C1C87C18A8957F71759D0 /* Pods_DevslopesSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevslopesSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,6 +127,7 @@
 				A98439121F6B3931007BE401 /* FancyBtn.swift */,
 				A986E0ED1F772B2F00762DE2 /* CircleView.swift */,
 				A986E0EF1F77419400762DE2 /* PostCell.swift */,
+				A9EA97751F7EDC150078F221 /* ProfileView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				A98438F41F69DF57007BE401 /* SignInVC.swift */,
+				A9EA97731F7ECE580078F221 /* ProfileVC.swift */,
 				A986E0EB1F74629F00762DE2 /* FeedVC.swift */,
 			);
 			name = Controller;
@@ -295,9 +301,11 @@
 				A98438F31F69DF57007BE401 /* AppDelegate.swift in Sources */,
 				A986E0F41F7788EE00762DE2 /* DataService.swift in Sources */,
 				A986E0EC1F74629F00762DE2 /* FeedVC.swift in Sources */,
+				A9EA97741F7ECE580078F221 /* ProfileVC.swift in Sources */,
 				A984390A1F6B3416007BE401 /* FancyView.swift in Sources */,
 				A984390D1F6B349E007BE401 /* Constants.swift in Sources */,
 				A98439131F6B3931007BE401 /* FancyBtn.swift in Sources */,
+				A9EA97761F7EDC150078F221 /* ProfileView.swift in Sources */,
 				A986E0F01F77419400762DE2 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
